@@ -1,4 +1,4 @@
-Snowflow
+Snowflake
 ========
 
 A High Pefermance ID Generator

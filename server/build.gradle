@@ -1,0 +1,22 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        maven { url "http://maven.aliyun.com/nexus/content/groups/public" }
+        mavenCentral()
+        maven { url "http://repo.spring.io/libs-snapshot" }
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion")
+    }
+}
+
+apply plugin: "org.springframework.boot"
+
+dependencies {
+    compile project(":common:utils")
+    compile project(":snowflake:api")
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.springframework.boot:spring-boot-starter-log4j2")
+    compile("org.springframework.cloud:spring-cloud-starter-eureka")
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+}

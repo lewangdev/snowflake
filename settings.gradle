@@ -1,0 +1,5 @@
+rootProject.name = "snowflake"
+include "snowflake:api"
+include "snowflake:server"
+include "snowflake:grpc-client"
+include "snowflake:rest-client"
